@@ -75,6 +75,28 @@ div#chatbox {
 	overflow: auto;
 }
 
+div.info {
+	padding: 30px;
+}
+
+div.info form {
+	margin: 25px 0;
+}
+
+div.info form input[type='text'] {
+	font-size: 20px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+div.info form input[type='submit'] {
+	font-size: 20px;
+}
+
+div.info form div {
+	margin: 10px;
+}
+
 table.chat_table {
     width: 100%;
     border-collapse: collapse;

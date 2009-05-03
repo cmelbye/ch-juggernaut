@@ -1,7 +1,7 @@
 <div id="chatbox">
 	<table id="chat_data" class="chat_table">
 		<% for message in @messages %>
-			<tr><td><%= message.body %></td></tr>
+			<tr><td class="sender"><%= message.created_by %></td><td><%= message.body %></td></tr>
 		<% end %>
 	</table>
 </div>

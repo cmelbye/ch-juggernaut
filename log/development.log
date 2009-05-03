@@ -696,3 +696,832 @@ Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:18:54) [POST
   Parameters: {"chat_input"=>" Helvetica.", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
   [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:18:54', ' Helvetica.', '2009-05-03 00:18:54')[0m
 Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMessagesTable (20090502233545)
+Migrating to AddCreatedByToMessages (20090503193648)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (17.8ms)[0m   [0mALTER TABLE "messages" ADD "created_by" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090503193648')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("messages")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:41:08) [GET]
+
+SyntaxError (/Users/charlie/Developer/collabhub/app/controllers/chat_controller.rb:10: syntax error, unexpected tIVAR, expecting kDO or '{' or '('
+      page.call('CollabHub.handleResponse', h @message.body, h @message.created_by)
+                                                                       ^
+/Users/charlie/Developer/collabhub/app/controllers/chat_controller.rb:10: syntax error, unexpected ')', expecting kEND
+/Users/charlie/Developer/collabhub/app/controllers/chat_controller.rb:14: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (25.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-03 14:41:42) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:43) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:45) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-03 14:41:56) [GET]
+Redirected to http://localhost:3000/session/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:41:56) [GET]
+Rendering session/login
+ERROR: compiling _run_erb_app47views47session47login46html46erb RAISED compile error
+/Users/charlie/Developer/collabhub/app/views/session/login.html.erb:5: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47session47login46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  form_tag '/session/login' 
+@output_buffer.concat "\t"; @output_buffer.concat(( text_field_tag 'user_name', '' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t"; @output_buffer.concat(( submit_tag 'Start Chatting' ).to_s); @output_buffer.concat "\n"
+ end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/charlie/Developer/collabhub/app/views/session/login.html.erb:5:in `compile!'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render_without_juggernaut'
+/Users/charlie/Developer/collabhub/vendor/plugins/juggernaut_plugin/lib/juggernaut.rb:154:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render_without_juggernaut'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render_without_juggernaut'
+/Users/charlie/Developer/collabhub/vendor/plugins/juggernaut_plugin/lib/juggernaut.rb:154:in `render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+/Library/Ruby/Gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/Library/Ruby/Gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/Library/Ruby/Gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+/Users/charlie/Developer/collabhub/app/views/session/login.html.erb:5: syntax error, unexpected kENSURE, expecting $end) on line #5 of app/views/session/login.html.erb:
+2: 	<%= text_field_tag 'user_name', '' %>
+3: 	<%= submit_tag 'Start Chatting' %>
+4: <% end %>
+
+    app/views/session/login.html.erb:5:in `compile!'
+
+Rendered rescues/_trace (81.5ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:42:13) [GET]
+Rendering session/login
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:42:35) [GET]
+Rendering session/login
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:43:35) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:43:35) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:44:22) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:44:22) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:44:43) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:44:43) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:45:10) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:45:10) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:45:23) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:45:23) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:45:47) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:45:47) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:46:06) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:46:06) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:46:13) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:46:13) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:46:22) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:46:22) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:46:23) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:46:23) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:46:43) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 50ms (View: 49, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:46:43) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:47:01) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:47:01) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:47:09) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 3ms (View: 1, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:47:09) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:47:14) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:47:14) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:47:17) [POST]
+  Parameters: {"commit"=>"Start Chatting", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "user_name"=>"charlie"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-03 14:47:17) [GET]
+  [4;36;1mMessage Load (8.9ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/application
+Rendering chat/index
+Completed in 136ms (View: 63, DB: 9) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:47:17) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:47:22) [POST]
+  Parameters: {"chat_input"=>"wee!", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.4ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:47:22', 'wee!', NULL, '2009-05-03 19:47:22')[0m
+Completed in 18ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:47:28) [POST]
+  Parameters: {"chat_input"=>"okay then, it does not work :P", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:47:28', 'okay then, it does not work :P', NULL, '2009-05-03 19:47:28')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+  [4;36;1mMessage Load (1.8ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mMessage Destroy (0.4ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 2[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 3[0m
+  [4;35;1mMessage Destroy (0.3ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 4[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 5[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 6[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 7[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 8[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 9[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 10[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 11[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 12[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 13[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 14[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 15[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 16[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 17[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 18[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 19[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 20[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 21[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 22[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 23[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 24[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 25[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 26[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 27[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 28[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 29[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 30[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 31[0m
+  [4;35;1mMessage Destroy (0.2ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 32[0m
+  [4;36;1mMessage Destroy (0.2ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 33[0m
+  [4;35;1mMessage Load (0.2ms)[0m   [0mSELECT * FROM "messages" [0m
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-03 14:48:32) [GET]
+  [4;35;1mMessage Load (0.3ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/application
+Rendering chat/index
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:48:32) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:48:37) [POST]
+  Parameters: {"chat_input"=>"Hello, world.", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:48:37', 'Hello, world.', 'charlie', '2009-05-03 19:48:37')[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:48:43) [POST]
+  Parameters: {"chat_input"=>"grr. GRR, I say!", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:48:43', 'grr. GRR, I say!', 'charlie', '2009-05-03 19:48:43')[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:48:45) [POST]
+  Parameters: {"chat_input"=>"grr", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:48:45', 'grr', 'charlie', '2009-05-03 19:48:45')[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:48:46) [POST]
+  Parameters: {"chat_input"=>"wee", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:48:46', 'wee', 'charlie', '2009-05-03 19:48:46')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:48:49) [GET]
+Rendering template within layouts/application
+Rendering session/login
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/session/login]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:48:49) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionController#login (for 127.0.0.1 at 2009-05-03 14:48:52) [POST]
+  Parameters: {"commit"=>"Start Chatting", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "user_name"=>"charles.melbye"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/session/login]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-03 14:48:52) [GET]
+  [4;36;1mMessage Load (0.6ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/application
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:48:52) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:48:56) [POST]
+  Parameters: {"chat_input"=>"okay then", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.4ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:48:56', 'okay then', 'charles.melbye', '2009-05-03 19:48:56')[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:48:58) [POST]
+  Parameters: {"chat_input"=>"why.", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:48:58', 'why.', 'charles.melbye', '2009-05-03 19:48:58')[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:49:00) [POST]
+  Parameters: {"chat_input"=>"just. why.", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:49:00', 'just. why.', 'charles.melbye', '2009-05-03 19:49:00')[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-03 14:49:39) [GET]
+  [4;36;1mMessage Load (0.7ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/application
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:49:39) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:49:44) [POST]
+  Parameters: {"chat_input"=>"Okay, *now* it works.", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.4ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:49:44', 'Okay, *now* it works.', 'charles.melbye', '2009-05-03 19:49:44')[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:49:46) [POST]
+  Parameters: {"chat_input"=>"or not", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:49:46', 'or not', 'charles.melbye', '2009-05-03 19:49:46')[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-03 14:50:08) [GET]
+  [4;35;1mMessage Load (0.8ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/application
+Rendering chat/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:50:08) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:50:10) [POST]
+  Parameters: {"chat_input"=>"test?", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:50:10', 'test?', 'charles.melbye', '2009-05-03 19:50:10')[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-03 14:50:58) [GET]
+  [4;35;1mMessage Load (0.9ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/application
+Rendering chat/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:50:58) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:51:12) [POST]
+  Parameters: {"chat_input"=>"testing", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:51:12', 'testing', 'charles.melbye', '2009-05-03 19:51:12')[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-03 14:52:18) [GET]
+  [4;35;1mMessage Load (0.9ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/application
+Rendering chat/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-03 14:52:21) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:52:32) [POST]
+  Parameters: {"chat_input"=>"Okay, finally it works.", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.6ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:52:32', 'Okay, finally it works.', 'charles.melbye', '2009-05-03 19:52:32')[0m
+Completed in 23ms (View: 1, DB: 1) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:52:41) [POST]
+  Parameters: {"chat_input"=>"wee", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:52:41', 'wee', 'charles.melbye', '2009-05-03 19:52:41')[0m
+Completed in 11ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:52:42) [POST]
+  Parameters: {"chat_input"=>"test", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:52:42', 'test', 'charles.melbye', '2009-05-03 19:52:42')[0m
+Completed in 165ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:52:45) [POST]
+  Parameters: {"chat_input"=>"lolol", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.4ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:52:45', 'lolol', 'charles.melbye', '2009-05-03 19:52:45')[0m
+Completed in 36ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:52:46) [POST]
+  Parameters: {"chat_input"=>"haha", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:52:46', 'haha', 'charles.melbye', '2009-05-03 19:52:46')[0m
+Completed in 270ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-03 14:52:47) [POST]
+  Parameters: {"chat_input"=>"yay", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.4ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_by", "created_at") VALUES('2009-05-03 19:52:47', 'yay', 'charles.melbye', '2009-05-03 19:52:47')[0m
+Completed in 10ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]

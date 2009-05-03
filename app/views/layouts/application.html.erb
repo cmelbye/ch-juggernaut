@@ -8,7 +8,9 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="/static/style.css" />
 		<%= stylesheet_link_tag 'collabhub' %>
 		<%= javascript_include_tag 'prototype', 'application', :juggernaut %>
-		<%= juggernaut %>
+		<% if @enable_juggernaut %>
+			<%= juggernaut %>
+		<% end %>
 	</head>
 	<body>
 		<div id="header">
