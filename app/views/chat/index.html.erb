@@ -6,7 +6,7 @@
 	</table>
 </div>
 <div id="inputbox">
-	<%= form_remote_tag( :url => { :action => :send_data }, :complete => "$('chat_input').value = ''" ) %>
+	<%= form_remote_tag( :url => { :action => :send_data }, :complete => "CollabHub.goDown()" ) %>
 		<%= text_field_tag( 'chat_input', '', { :size => 20, :id => "chat_input" } ) %>
 	</form>
 </div>

@@ -12,9 +12,14 @@
 			<%= juggernaut %>
 		<% end %>
 	</head>
-	<body>
+	<body<%= ' onload="CollabHub.goDown()"' if @enable_juggernaut %>>
 		<div id="header">
 			<span class="title">CollabHub</span>
+			<% if logged_in? %>
+				<span class="links">
+					<%= link_to 'Logout', logout_path %>
+				</span>
+			<% end%>
 		</div>
 		<%= yield %>
 	</body>

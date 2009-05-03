@@ -1,6 +1,10 @@
 <div id="chatbox" class="info">
+<% if flash[:notice] %>
+	<p><strong><em><%= flash[:notice] %></em></p><br /><br />
+<% end %>
+
 <h2>Login</h2>
-<%= form_tag '/session/login' -%>
+<%= form_tag login_path -%>
 	<div><%= text_field_tag 'user_name', '' %></div>
 	<div><%= submit_tag 'Start Chatting' %></div>
 </form>

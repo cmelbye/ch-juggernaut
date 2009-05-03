@@ -9,5 +9,8 @@ class SessionController < ApplicationController
   end
 
   def logout
+    session[:user_name] = nil
+    flash[:notice] = 'You are now logged out.'
+    redirect_to login_path
   end
 end
