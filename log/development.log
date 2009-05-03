@@ -1,0 +1,698 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (10.9ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMessagesTable (20090502233545)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090502233545')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("messages")[0m
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:43:29) [GET]
+  [4;36;1mMessage Load (0.4ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 64ms (View: 60, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:43:32) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"hey there", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.4ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:43:32', NULL, '2009-05-02 23:43:32')[0m
+Completed in 39ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:44:16) [GET]
+  [4;36;1mMessage Load (0.5ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:44:20) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"hello there", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:44:20', 'hello there', '2009-05-02 23:44:20')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:44:23) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"yay", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:44:23', 'yay', '2009-05-02 23:44:23')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:44:24) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"wee", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.4ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:44:24', 'wee', '2009-05-02 23:44:24')[0m
+Completed in 9ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:44:25) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"i rock", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:44:25', 'i rock', '2009-05-02 23:44:25')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:44:27) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"okay", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:44:27', 'okay', '2009-05-02 23:44:27')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:44:29) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"we're done now", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.6ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:44:29', 'we''re done now', '2009-05-02 23:44:29')[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:44:34) [GET]
+  [4;35;1mMessage Load (0.7ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 6ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:44:59) [GET]
+  [4;36;1mMessage Load (0.6ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:47:01) [GET]
+  [4;35;1mMessage Load (0.6ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 9ms (View: 5, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:47:04) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"yay", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.4ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:47:04', 'yay', '2009-05-02 23:47:04')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:47:11) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"it's in the right order, and messages are reloaded when we refresh", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:47:11', 'it''s in the right order, and messages are reloaded when we refresh', '2009-05-02 23:47:11')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:47:13) [GET]
+  [4;36;1mMessage Load (0.7ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:47:15) [GET]
+  [4;35;1mMessage Load (0.8ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:47:16) [GET]
+  [4;36;1mMessage Load (0.7ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:47:17) [GET]
+  [4;35;1mMessage Load (0.7ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:49:20) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"yay", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:49:20', 'yay', '2009-05-02 23:49:20')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:52:46) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"test", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:52:46', 'test', '2009-05-02 23:52:46')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:52:47) [GET]
+  [4;36;1mMessage Load (0.8ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:52:48) [GET]
+  [4;35;1mMessage Load (0.8ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:58:28) [GET]
+  [4;36;1mMessage Load (0.8ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 18:58:28) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:58:31) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"test", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:58:31', 'test', '2009-05-02 23:58:31')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 18:58:34) [POST]
+  Parameters: {"commit"=>"Send Message", "chat_input"=>"wee", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-02 23:58:34', 'wee', '2009-05-02 23:58:34')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:59:08) [GET]
+  [4;35;1mMessage Load (0.9ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 18:59:08) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:59:10) [GET]
+  [4;36;1mMessage Load (0.8ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 18:59:10) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:59:21) [GET]
+  [4;35;1mMessage Load (0.8ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 18:59:21) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mMessage Load (0.2ms)[0m   [0;1mSELECT * FROM "messages" WHERE ("messages"."body" = '') LIMIT 1[0m
+  [4;35;1mMessage Load (0.7ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mMessage Load (0.3ms)[0m   [0;1mSELECT * FROM "messages" WHERE ("messages"."body" IS NULL) LIMIT 1[0m
+  [4;35;1mMessage Load (0.3ms)[0m   [0mSELECT * FROM "messages" WHERE ("messages"."body" IS NULL) LIMIT 1[0m
+  [4;36;1mMessage Destroy (0.3ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 1[0m
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 18:59:54) [GET]
+  [4;36;1mMessage Load (0.8ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 18:59:54) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:12) [GET]
+  [4;35;1mMessage Load (0.8ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:12) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:21) [GET]
+  [4;36;1mMessage Load (0.8ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:21) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:41) [GET]
+  [4;35;1mMessage Load (0.9ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 8ms (View: 4, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:41) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:00:44) [POST]
+  Parameters: {"chat_input"=>"testing one two three", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.4ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:00:44', 'testing one two three', '2009-05-03 00:00:44')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:54) [GET]
+  [4;35;1mMessage Load (0.9ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:54) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:55) [GET]
+  [4;36;1mMessage Load (0.8ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:55) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:56) [GET]
+  [4;35;1mMessage Load (0.8ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:56) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:56) [GET]
+  [4;36;1mMessage Load (0.8ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:56) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:57) [GET]
+  [4;35;1mMessage Load (0.9ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:57) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:57) [GET]
+  [4;36;1mMessage Load (0.9ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 53ms (View: 49, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:57) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:57) [GET]
+  [4;35;1mMessage Load (0.9ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:58) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:58) [GET]
+  [4;36;1mMessage Load (0.8ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:58) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:00:58) [GET]
+  [4;35;1mMessage Load (0.8ms)[0m   [0mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:00:58) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:01:00) [POST]
+  Parameters: {"chat_input"=>"hehe", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:01:00', 'hehe', '2009-05-03 00:01:00')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:01:02) [POST]
+  Parameters: {"chat_input"=>"test", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:01:02', 'test', '2009-05-03 00:01:02')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:01:02) [GET]
+  [4;36;1mMessage Load (0.9ms)[0m   [0;1mSELECT * FROM "messages" ORDER BY id DESC[0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 58ms (View: 53, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:01:02) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:01:12) [GET]
+  [4;35;1mMessage Load (0.9ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:01:12) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:01:14) [POST]
+  Parameters: {"chat_input"=>"wee", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:01:14', 'wee', '2009-05-03 00:01:14')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:01:15) [POST]
+  Parameters: {"chat_input"=>"testing", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:01:15', 'testing', '2009-05-03 00:01:15')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:01:17) [POST]
+  Parameters: {"chat_input"=>"please work", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:01:17', 'please work', '2009-05-03 00:01:17')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:01:18) [POST]
+  Parameters: {"chat_input"=>"Yay", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:01:18', 'Yay', '2009-05-03 00:01:18')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:01:19) [POST]
+  Parameters: {"chat_input"=>"No", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:01:19', 'No', '2009-05-03 00:01:19')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:01:20) [POST]
+  Parameters: {"chat_input"=>"boo", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:01:20', 'boo', '2009-05-03 00:01:20')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:06:07) [GET]
+  [4;36;1mMessage Load (1.2ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:06:07) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:06:14) [POST]
+  Parameters: {"chat_input"=>"Um, please no.", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:06:14', 'Um, please no.', '2009-05-03 00:06:14')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:06:25) [GET]
+  [4;36;1mMessage Load (1.2ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:06:25) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:06:30) [GET]
+  [4;35;1mMessage Load (1.2ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:06:30) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:06:38) [GET]
+  [4;36;1mMessage Load (1.2ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:06:38) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:06:43) [GET]
+  [4;35;1mMessage Load (1.2ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:06:43) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:10:52) [POST]
+  Parameters: {"chat_input"=>"yay", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (35.2ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:10:52', 'yay', '2009-05-03 00:10:52')[0m
+Completed in 45ms (View: 1, DB: 35) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:11:25) [GET]
+  [4;35;1mMessage Load (1.3ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:11:25) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:11:28) [POST]
+  Parameters: {"chat_input"=>"test", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:11:28', 'test', '2009-05-03 00:11:28')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:11:29) [POST]
+  Parameters: {"chat_input"=>"wee", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:11:29', 'wee', '2009-05-03 00:11:29')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:11:32) [POST]
+  Parameters: {"chat_input"=>"it's working bettar now", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:11:32', 'it''s working bettar now', '2009-05-03 00:11:32')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:14:37) [GET]
+  [4;35;1mMessage Load (1.4ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:14:37) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:14:42) [POST]
+  Parameters: {"chat_input"=>"testing one two three", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.6ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:14:42', 'testing one two three', '2009-05-03 00:14:42')[0m
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:14:45) [POST]
+  Parameters: {"chat_input"=>"are you thar", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:14:45', 'are you thar', '2009-05-03 00:14:45')[0m
+Completed in 18ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#index (for 127.0.0.1 at 2009-05-02 19:14:46) [GET]
+  [4;36;1mMessage Load (1.5ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/chat
+Rendering chat/index
+Completed in 58ms (View: 3, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-05-02 19:14:46) [GET]
+
+ActionController::RoutingError (No route matches "/static/style.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:18:44) [POST]
+  Parameters: {"chat_input"=>"wee", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;35;1mMessage Create (0.3ms)[0m   [0mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:18:44', 'wee', '2009-05-03 00:18:44')[0m
+Completed in 17ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]
+
+
+Processing ChatController#send_data (for 127.0.0.1 at 2009-05-02 19:18:54) [POST]
+  Parameters: {"chat_input"=>" Helvetica.", "authenticity_token"=>"UGHuZTRYcJuppDKYc7PiCsVQwoviKcaLWnm1zuh5ggE=", "_"=>""}
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO "messages" ("updated_at", "body", "created_at") VALUES('2009-05-03 00:18:54', ' Helvetica.', '2009-05-03 00:18:54')[0m
+Completed in 8ms (View: 1, DB: 0) | 200 OK [http://localhost/chat/send_data]

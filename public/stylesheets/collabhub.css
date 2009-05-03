@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #202020;
+	color: #ffffff;
+	font-family: "lucida grande", sans-serif;
+	font-size: 12px;
+}
+
+a:link,
+a:visited {
+	color: #c0c0e0;
+	text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: underline;
+}
+
+div#header {
+    background-color: #38383e;
+    opacity: 0.9;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+div#header .title {
+    padding: 1em 1.5em;
+    display: block;
+    font-size: 2em;
+    font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+}
+
+div#header .links {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: block;
+}
+
+div#header .links .acct {
+    font-weight: bold;
+}
+
+div#inputbox {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #101010;
+}
+
+div#inputbox form {
+	margin: 2em;
+}
+
+div#inputbox form input[type='text'] {
+	width: 100%;
+	font-size: 20px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+}
+
+div#chatbox {
+    margin-top: 6.4em;
+	margin-bottom: 4.9em;
+	overflow: auto;
+}
+
+table.chat_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.chat_table tr {
+    border-bottom: 1px solid #282828;
+}
+
+table.chat_table tr td {
+    padding: 1em 0;
+}
+
+table.chat_table tr td.sender {
+    font-weight: bold;
+    width: 10%;
+    padding: 1em 1em;
+    text-align: right;
+}
